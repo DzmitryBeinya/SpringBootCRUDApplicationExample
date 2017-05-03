@@ -16,7 +16,7 @@ angular.module('crudApp').factory('StudentService',
             return factory;
 
             function loadAllStudents() {
-                console.log('Fetching all users');
+                console.log('Fetching all students');
                 var deferred = $q.defer();
                 $http.get(urls.USER_SERVICE_API)
                     .then(
@@ -47,7 +47,7 @@ angular.module('crudApp').factory('StudentService',
                             deferred.resolve(response.data);
                         },
                         function (errResponse) {
-                            console.error('Error while loading user with id :'+id);
+                            console.error('Error while loading users with id :'+id);
                             deferred.reject(errResponse);
                         }
                     );

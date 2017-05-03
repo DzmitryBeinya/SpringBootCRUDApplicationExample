@@ -20,18 +20,23 @@ public class Student implements Serializable {
     @Column(name = "st_name", nullable = false)
     private String name;
 
+    @NotEmpty
     @Column(name = "st_surname", nullable = false)
     private String surname;
 
+    @NotEmpty
     @Column(name = "st_university", nullable = false)
     private String university;
 
+    @NotEmpty
     @Column(name = "st_faculty", nullable = false)
     private String faculty;
 
+    @NotEmpty
     @Column(name = "st_group", nullable = false)
     private String group;
 
+    @NotEmpty
     @Column(name = "st_room", nullable = false)
     private String roomNumber;
 

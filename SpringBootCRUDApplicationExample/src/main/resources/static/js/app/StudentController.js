@@ -97,10 +97,10 @@ angular.module('crudApp').controller('StudentController',
             self.errorMessage='';
             StudentService.getStudent(id).then(
                 function (student) {
-                    self.user = student;
+                    self.student = student;
                 },
                 function (errResponse) {
-                    console.error('Error while removing user ' + id + ', Error :' + errResponse.data);
+                    console.error('Error while removing student ' + id + ', Error :' + errResponse.data);
                 }
             );
         }

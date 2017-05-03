@@ -19,9 +19,9 @@
 
 	                <div class="row">
 	                    <div class="form-group col-md-12">
-	                        <label class="col-md-2 control-lable" for="age">Surname</label>
+	                        <label class="col-md-2 control-lable" for="usurname">Surname</label>
 	                        <div class="col-md-7">
-	                            <input type="text" ng-model="ctrl.student.surname" id="surname" class="form-control input-sm" placeholder="Enter surname." ng-minlength="3"/>
+	                            <input type="text" ng-model="ctrl.student.surname" id="usurname" class="studentsurname form-control input-sm" placeholder="Enter surname." ng-minlength="3"/>
 	                        </div>
 	                    </div>
 	                </div>
@@ -30,34 +30,34 @@
 	                    <div class="form-group col-md-12">
 	                        <label class="col-md-2 control-lable" for="university">University</label>
 	                        <div class="col-md-7">
-	                            <input type="text" ng-model="ctrl.user.university" id="university" class="form-control input-sm" placeholder="Enter university." required ng-minlength="3"/>
+	                            <input type="text" ng-model="ctrl.student.university" id="university" class="studentuniversity form-control input-sm" placeholder="Enter university." required ng-minlength="3"/>
 	                        </div>
 	                    </div>
 	                </div>
 
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-lable" for="age">Faculty</label>
+                            <label class="col-md-2 control-lable" for="faculty">Faculty</label>
                             <div class="col-md-7">
-                                <input type="text" ng-model="ctrl.student.faculty" id="faculty" class="form-control input-sm" placeholder="Enter faculty." ng-minlength="3"/>
+                                <input type="text" ng-model="ctrl.student.faculty" id="faculty" class="studentfaculty form-control input-sm" placeholder="Enter faculty." ng-minlength="3"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-lable" for="age">Group</label>
+                            <label class="col-md-2 control-lable" for="group">Group</label>
                             <div class="col-md-7">
-                                <input type="text" ng-model="ctrl.student.group" id="group" class="form-control input-sm" placeholder="Enter group." ng-minlength="3"/>
+                                <input type="text" ng-model="ctrl.student.group" id="group" class="studentgroup form-control input-sm" placeholder="Enter group." ng-minlength="3"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label class="col-md-2 control-lable" for="age">Room</label>
+                            <label class="col-md-2 control-lable" for="roomNumber">Room</label>
                             <div class="col-md-7">
-                                <input type="text" ng-model="ctrl.student.room" id="room" class="form-control input-sm" placeholder="Enter room." ng-minlength="3"/>
+                                <input type="text" ng-model="ctrl.student.roomNumber" id="roomNumber" class="studentroom form-control input-sm" placeholder="Enter Room Number." ng-minlength="3"/>
                             </div>
                         </div>
                     </div>
@@ -100,9 +100,9 @@
 		                <td>{{u.university}}</td>
 						<td>{{u.faculty}}</td>
                         <td>{{u.group}}</td>
-                        <td>{{u.room}}</td>
-		                <td><button type="button" ng-click="ctrl.editUser(u.id)" class="btn btn-success custom-width">Edit</button></td>
-		                <td><button type="button" ng-click="ctrl.removeUser(u.id)" class="btn btn-danger custom-width">Remove</button></td>
+                        <td>{{u.roomNumber}}</td>
+		                <td><button type="button" ng-click="ctrl.editStudent(u.id)" class="btn btn-success custom-width">Edit</button></td>
+		                <td><button type="button" ng-click="ctrl.removeStudent(u.id)" class="btn btn-danger custom-width">Remove</button></td>
 		            </tr>
 		            </tbody>
 		        </table>		
