@@ -2,6 +2,8 @@ package com.websystique.springboot.controller;
 
 import java.util.List;
 
+import com.websystique.springboot.model.Student;
+import com.websystique.springboot.service.StudentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +23,15 @@ import com.websystique.springboot.util.CustomErrorType;
 
 @RestController
 @RequestMapping("/api")
-public class RestApiController {
+public class  RestApiController {
 
 	public static final Logger logger = LoggerFactory.getLogger(RestApiController.class);
 
 	@Autowired
 	UserService userService; //Service which will do all data retrieval/manipulation work
 
+	@Autowired
+	StudentService studentService;
 	// -------------------Retrieve All Users---------------------------------------------
 
 	@RequestMapping(value = "/user/", method = RequestMethod.GET)
@@ -118,6 +122,18 @@ public class RestApiController {
 
 		userService.deleteAllUsers();
 		return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+	}
+
+	// -------------------Retrieve All Users---------------------------------------------
+
+	@RequestMapping(value = "/student/", method = RequestMethod.GET)
+	public ResponseEntity<List<Student>> listAllStudents() {
+		List<Student> students = studentService.findAllStudents();
+		if (students.isEmpty()) {
+			return new ResponseEntity(HttpStatus.NO_CONTENT);
+			// You many decide to return HttpStatus.NOT_FOUND
+		}
+		return new ResponseEntity<List<Student>>(students, HttpStatus.OK);
 	}
 
 }
